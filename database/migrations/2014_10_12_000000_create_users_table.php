@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('email', 50)->unique()->require;
             $table->string('password')->require;
-            $table->string('lastname', 50)->require;
+            $table->string('lastname', 50)->nullable();
             $table->string('firstname', 50)->require;
             $table->enum('role', ['USER', 'ADMIN']);
             $table->boolean('account_status');
